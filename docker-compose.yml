@@ -1,0 +1,8 @@
+services:
+  backend:
+    container_name: golang_udemy
+    tty: true
+    restart: on-failure
+    build: .
+    volumes:
+      - ./:/udemy
