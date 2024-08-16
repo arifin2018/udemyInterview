@@ -12,8 +12,7 @@ import (
 
 func twoSum(nums []int, target int) []int {
 	var resultNums []int
-	// nums: []int{3,2,4},
-	// 		target: 6,
+	// it's my logic from to scratch
 
 	for i := 0; i < len(nums)-1; i++ {
 		for j := i+1; j < len(nums); j++ {
@@ -25,6 +24,19 @@ func twoSum(nums []int, target int) []int {
 		}
 	}
 	return resultNums
+}
+
+func findTwoSum(nums []int, target int) []int {
+	// https://replit.com/@ZhangMYihua/two-sum-brute-force#index.js
+	for p1 := 0; p1 < len(nums); p1++ {
+		var numberToFind = target - nums[p1]
+		for p2 := p1+1; p2 < len(nums); p2++ {
+			if numberToFind == nums[p2] {
+				return []int{p1, p2}
+			}
+		}
+	}
+	return []int(nil)
 }
 
 
@@ -83,6 +95,10 @@ func TestMain(t *testing.T)  {
 	for _, v := range test {
 		t.Run(v.name,func(t *testing.T) {
 			result := twoSum(v.argument.nums,v.argument.target)
+			assert.Equal(t,v.want, result)
+		})
+		t.Run(v.name,func(t *testing.T) {
+			result := findTwoSum(v.argument.nums,v.argument.target)
 			assert.Equal(t,v.want, result)
 		})
 	}
