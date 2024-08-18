@@ -33,6 +33,14 @@ func findTwoSum(nums []int, target int) []int {
 	target: 11,
 	result: []int{3,4}
 
+	11-3= (8 == 7)
+
+
+	for 0; 2<5; 2
+		4 (numberToFind) = 11 - 7(nums[1])
+		for 1+1; 5<5; 5
+			if 8 == 2
+
 	*/
 	// https://replit.com/@ZhangMYihua/two-sum-brute-force#index.js
 	for p1 := 0; p1 < len(nums); p1++ {
