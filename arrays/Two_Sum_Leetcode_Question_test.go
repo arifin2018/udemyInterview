@@ -27,6 +27,13 @@ func twoSum(nums []int, target int) []int {
 }
 
 func findTwoSum(nums []int, target int) []int {
+	/**
+
+	nums: []int{1, 3, 7, 9, 2},
+	target: 11,
+	result: []int{3,4}
+
+	*/
 	// https://replit.com/@ZhangMYihua/two-sum-brute-force#index.js
 	for p1 := 0; p1 < len(nums); p1++ {
 		var numberToFind = target - nums[p1]
